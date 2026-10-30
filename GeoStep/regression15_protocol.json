@@ -1,0 +1,125 @@
+{
+  "run": "regression15_30k_v7",
+  "scope": "same-capacity, same-initialization, same-training-stream direct-regression control for frozen 14.99M FM",
+  "seeds": [
+    0
+  ],
+  "models": [
+    "regression"
+  ],
+  "steps_per_model": 30000,
+  "total_optimizer_updates": 30000,
+  "batch_size": 64,
+  "network_parameters": 14986435,
+  "network_source": "capacity15_models.LargeUNet; inherited pilot.UNet.forward",
+  "learning_rate_recipe": "exact original three-stage recipe: warm100+cosine2e-4 to4e-5 at2000; constant4e-5 to10000; recover to8e-5 at11000; cosine to1e-5 at30000",
+  "weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "ema_decay": 0.995,
+  "missing_pixels": 1638,
+  "large_size": [
+    31,
+    53
+  ],
+  "corner_pixels_removed": 5,
+  "fragment_gap": 1,
+  "minimum_visible_outer_margin": 1,
+  "horizontal_cut_choices": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "vertical_cut_choices": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "match_center16_exactly": true,
+  "maximum_quadrant_missing_count_difference": 0,
+  "maximum_mask_centroid_difference_pixels": 1.0,
+  "area_replacement": "expand by one pixel in the same quadrant as each inserted visible slit; exact quadrant missing counts; remove five corner pixels from each condition to reach 1638",
+  "core_foreground_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_foreground": 0.03
+  },
+  "possible_foreground_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_foreground": 0.03
+  },
+  "uncertain_caliper_pixels": 64,
+  "foreground_quadrant_caliper": {
+    "role": "diagnostic only; total quadrant mask counts are exactly matched"
+  },
+  "head_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_head_box": 0.03
+  },
+  "train_pairs_per_image": 16,
+  "dev_pairs_per_image": 4,
+  "mask_selection_seed": 202610220,
+  "shared_mask_bank_across_training_seeds": true,
+  "unsupported_images": "exclude symmetrically before training; require at least 80 percent of original train and dev images retained; no model outcomes used",
+  "minimum_retained_fraction": 0.8,
+  "training_flip": "flip image and its paired masks together to preserve foreground matching",
+  "checkpoints": [
+    10000,
+    20000,
+    30000
+  ],
+  "nfe": [
+    1
+  ],
+  "ensemble_samples": 1,
+  "noise_seed": 202610212,
+  "primary_contrast": "Regression LPIPS minus FM LPIPS; FM masked sample PSNR minus Regression PSNR; fixed30k, Regression1 vs FM8",
+  "support_criterion": "user removed minimum-effect threshold: report any positive mean improvement, uncertainty separately; joint improvement means LPIPS decreases and PSNR increases in equal-weight average of the two geometries; always report each geometry and any tradeoff",
+  "secondary_contrasts": [
+    "FM NFE1/2/4/8/16/32 versus fixed Regression1",
+    "10k/20k/30k learning curves at fixed FM8",
+    "per-geometry joint gains"
+  ],
+  "secondary_metrics": [
+    "PSNR"
+  ],
+  "evaluation": "same124 dev images, four frozen matched-mask pairs/image; Regression deterministic output versus FM existing four-sample average; image-paired bootstrap after averaging mask pairs",
+  "official_test_access": false,
+  "unchanged_old_runs": true,
+  "limitations": [
+    "one exploratory training seed; no automatic extra seeds or training extension",
+    "reused development images; no official test access",
+    "same updates and architecture do not equal inference cost; Regression1 vs FM8",
+    "different training objectives and time inputs; raw losses are not cross-comparable",
+    "inherited v4 common-support and approximate foreground matching limitations",
+    "image bootstrap does not measure training-seed variation; no minimum effect threshold"
+  ],
+  "candidate_selection": "sample uniformly among the 32 eligible candidates with smallest summed normalized core/possible/head count differences; ties shuffled by mask selection seed",
+  "annotation_only_design_audit": "39x42 with 2-pixel gaps rejected for insufficient support; 31x53 with 1-pixel gaps at 16px/2% retained 96/128 train-probe and 86/128 dev; 32px/3% retained 124/128 in each; design frozen before any new-model outcomes",
+  "channels": [
+    96,
+    192,
+    288,
+    384
+  ],
+  "baseline_run": "matched_geometry_30k_v4",
+  "baseline_parameters": 1747523,
+  "baseline_seed": 0,
+  "wall_budget_seconds": 10800,
+  "primary_nfe": 8,
+  "comparison_run": "capacity15_30k_v6",
+  "comparison_parameters": 14986435,
+  "fm_run": "capacity15_30k_v6",
+  "regression_nfe": 1,
+  "training_objective": "masked direct image MSE in [-1,1]; z=y, t=0, target=x"
+}

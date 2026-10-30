@@ -1,0 +1,128 @@
+{
+  "run": "capacity15_seed1_30k_v8",
+  "scope": "Exact seed1 replication of frozen 14.99M FM; unchanged recipe, masks and 30k budget",
+  "seeds": [
+    1
+  ],
+  "models": [
+    "fm"
+  ],
+  "steps_per_model": 30000,
+  "total_optimizer_updates": 30000,
+  "batch_size": 64,
+  "network_parameters": 14986435,
+  "network_source": "capacity15_models.LargeUNet; inherited pilot.UNet.forward",
+  "learning_rate_recipe": "exact original three-stage recipe: warm100+cosine2e-4 to4e-5 at2000; constant4e-5 to10000; recover to8e-5 at11000; cosine to1e-5 at30000",
+  "weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "ema_decay": 0.995,
+  "missing_pixels": 1638,
+  "large_size": [
+    31,
+    53
+  ],
+  "corner_pixels_removed": 5,
+  "fragment_gap": 1,
+  "minimum_visible_outer_margin": 1,
+  "horizontal_cut_choices": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "vertical_cut_choices": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "match_center16_exactly": true,
+  "maximum_quadrant_missing_count_difference": 0,
+  "maximum_mask_centroid_difference_pixels": 1.0,
+  "area_replacement": "expand by one pixel in the same quadrant as each inserted visible slit; exact quadrant missing counts; remove five corner pixels from each condition to reach 1638",
+  "core_foreground_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_foreground": 0.03
+  },
+  "possible_foreground_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_foreground": 0.03
+  },
+  "uncertain_caliper_pixels": 64,
+  "foreground_quadrant_caliper": {
+    "role": "diagnostic only; total quadrant mask counts are exactly matched"
+  },
+  "head_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_head_box": 0.03
+  },
+  "train_pairs_per_image": 16,
+  "dev_pairs_per_image": 4,
+  "mask_selection_seed": 202610220,
+  "shared_mask_bank_across_training_seeds": true,
+  "unsupported_images": "exclude symmetrically before training; require at least 80 percent of original train and dev images retained; no model outcomes used",
+  "minimum_retained_fraction": 0.8,
+  "training_flip": "flip image and its paired masks together to preserve foreground matching",
+  "checkpoints": [
+    10000,
+    20000,
+    30000
+  ],
+  "nfe": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "ensemble_samples": 4,
+  "noise_seed": 202610212,
+  "primary_contrast": "6.73M LPIPS minus 14.99M LPIPS; 14.99M masked sample PSNR minus 6.73M PSNR; at fixed 30k and NFE8",
+  "support_criterion": "user removed minimum-effect threshold: report any positive mean improvement, uncertainty separately; joint improvement means LPIPS decreases and PSNR increases in equal-weight average of the two geometries; always report each geometry and any tradeoff",
+  "secondary_contrasts": [
+    "complete NFE quality/cost curves",
+    "per-geometry joint gains",
+    "energy score and sample variance"
+  ],
+  "secondary_metrics": [
+    "PSNR",
+    "pixel energy score",
+    "ensemble variance"
+  ],
+  "evaluation": "common-support subset of original dev128; four matched mask pairs and four fixed iid noise samples per pair; bootstrap original images after averaging masks/noise",
+  "official_test_access": false,
+  "unchanged_old_runs": true,
+  "limitations": [
+    "this run is seed1; aggregate with the frozen seed0; no automatic further seeds or changes",
+    "reused development images; no formal test access",
+    "larger per-update compute; same updates is not equal training FLOPs",
+    "inherited matched-mask common-support and residual annotation-count limitations",
+    "no minimum 5 percent threshold; small uncertain differences are not established gains"
+  ],
+  "candidate_selection": "sample uniformly among the 32 eligible candidates with smallest summed normalized core/possible/head count differences; ties shuffled by mask selection seed",
+  "annotation_only_design_audit": "39x42 with 2-pixel gaps rejected for insufficient support; 31x53 with 1-pixel gaps at 16px/2% retained 96/128 train-probe and 86/128 dev; 32px/3% retained 124/128 in each; design frozen before any new-model outcomes",
+  "channels": [
+    96,
+    192,
+    288,
+    384
+  ],
+  "baseline_run": "matched_geometry_30k_v4",
+  "baseline_parameters": 1747523,
+  "baseline_seed": 1,
+  "wall_budget_seconds": 10800,
+  "primary_nfe": 8,
+  "comparison_run": "wide_capacity_30k_v5",
+  "comparison_parameters": 6734723
+}

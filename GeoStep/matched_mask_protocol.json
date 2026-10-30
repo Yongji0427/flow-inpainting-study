@@ -1,0 +1,121 @@
+{
+  "run": "matched_geometry_30k_v4",
+  "scope": "paired spatial and foreground-matched single-hole versus four-hole FM experiment",
+  "seeds": [
+    0,
+    1
+  ],
+  "models": [
+    "fm"
+  ],
+  "steps_per_model": 30000,
+  "total_optimizer_updates": 60000,
+  "batch_size": 64,
+  "network_parameters": 1747523,
+  "network_source": "unchanged pilot.UNet",
+  "learning_rate_recipe": "exact original three-stage recipe: warm100+cosine2e-4 to4e-5 at2000; constant4e-5 to10000; recover to8e-5 at11000; cosine to1e-5 at30000",
+  "weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "ema_decay": 0.995,
+  "missing_pixels": 1638,
+  "large_size": [
+    31,
+    53
+  ],
+  "corner_pixels_removed": 5,
+  "fragment_gap": 1,
+  "minimum_visible_outer_margin": 1,
+  "horizontal_cut_choices": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "vertical_cut_choices": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "match_center16_exactly": true,
+  "maximum_quadrant_missing_count_difference": 0,
+  "maximum_mask_centroid_difference_pixels": 1.0,
+  "area_replacement": "expand by one pixel in the same quadrant as each inserted visible slit; exact quadrant missing counts; remove five corner pixels from each condition to reach 1638",
+  "core_foreground_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_foreground": 0.03
+  },
+  "possible_foreground_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_foreground": 0.03
+  },
+  "uncertain_caliper_pixels": 64,
+  "foreground_quadrant_caliper": {
+    "role": "diagnostic only; total quadrant mask counts are exactly matched"
+  },
+  "head_caliper": {
+    "max_pixels": 32,
+    "max_fraction_of_head_box": 0.03
+  },
+  "train_pairs_per_image": 16,
+  "dev_pairs_per_image": 4,
+  "mask_selection_seed": 202610220,
+  "shared_mask_bank_across_training_seeds": true,
+  "unsupported_images": "exclude symmetrically before training; require at least 80 percent of original train and dev images retained; no model outcomes used",
+  "minimum_retained_fraction": 0.8,
+  "training_flip": "flip image and its paired masks together to preserve foreground matching",
+  "checkpoints": [
+    10000,
+    20000,
+    30000
+  ],
+  "nfe": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "ensemble_samples": 4,
+  "noise_seed": 202610212,
+  "primary_contrast": "G_g=mean(LPIPS_NFE4-LPIPS_NFE16); H=G_large-G_fragmented",
+  "support_criterion": "both seeds H>0 and G_large>0; report paired image bootstrap intervals and require >=0.002 point-estimate magnitude for practical support; not a population training-seed confidence interval",
+  "secondary_contrasts": [
+    [
+      1,
+      16
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "secondary_metrics": [
+    "PSNR",
+    "pixel energy score",
+    "ensemble variance"
+  ],
+  "evaluation": "common-support subset of original dev128; four matched mask pairs and four fixed iid noise samples per pair; bootstrap original images after averaging masks/noise",
+  "official_test_access": false,
+  "unchanged_old_runs": true,
+  "limitations": [
+    "two training seeds only",
+    "64x64 Pet images",
+    "common-support image subset; center16 missing pixels identical within each pair",
+    "foreground amount and coarse position matched; semantic identity outside center16 is not matched",
+    "new near-rectangle aspect ratio 31x53 with five corner pixels removed; fragmented condition has four local holes, unlike the old 16-hole whole-image condition"
+  ],
+  "candidate_selection": "sample uniformly among the 32 eligible candidates with smallest summed normalized core/possible/head count differences; ties shuffled by mask selection seed",
+  "annotation_only_design_audit": "39x42 with 2-pixel gaps rejected for insufficient support; 31x53 with 1-pixel gaps at 16px/2% retained 96/128 train-probe and 86/128 dev; 32px/3% retained 124/128 in each; design frozen before any new-model outcomes"
+}

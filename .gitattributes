@@ -1,0 +1,6 @@
+# Preserve frozen bytes, including CSV CRLF endings referenced by SHA-256.
+GeoStep/** -text
+data/splits.csv -text
+results/** -text
+*.png binary
+*.pdf binary

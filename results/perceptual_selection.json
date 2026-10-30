@@ -1,0 +1,24 @@
+{
+  "selected_alpha_tag": "alpha100",
+  "selected_alpha": 1.0,
+  "candidates": [
+    {
+      "alpha_tag": "alpha010",
+      "alpha": 0.1,
+      "overall_dev_lpips": 0.1173546404818133,
+      "overall_dev_psnr": 16.042143462165708,
+      "dev_rows_sha256": "3f2f8ab655d1919b599103552b8e077a3df0f34a5a7f9321e541d61e5958bd17"
+    },
+    {
+      "alpha_tag": "alpha100",
+      "alpha": 1.0,
+      "overall_dev_lpips": 0.11489769171983484,
+      "overall_dev_psnr": 15.86723128922524,
+      "dev_rows_sha256": "1498f217bd572dac3f5434b7c46baf57057c53d48b33b3d4a4f416c3e3cfefb7"
+    }
+  ],
+  "rule": "seed0 final30k EMA, minimum overall dev LPIPS averaged over 4 mask pairs and 2 geometries; exact ties: higher PSNR then lower alpha; report both candidate tradeoffs; no test access during selection",
+  "test_results_read_for_selection": false,
+  "post_test_supplement": true,
+  "new_test_inference_started_before_selection": false
+}

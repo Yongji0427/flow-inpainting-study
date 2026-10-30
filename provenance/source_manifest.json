@@ -1,0 +1,371 @@
+{
+  "release_date": "2026-10-30",
+  "policy": "Research scripts and protocols are copied byte-for-byte. Source labels identify their role without embedding workstation or server addresses.",
+  "files": [
+    {
+      "path": "GeoStep/analyze30k.py",
+      "source": "archived research implementation",
+      "sha256": "ca7322b1bb11c53f129e5c392ca3c6d27cc9cfe60a3e96d55d1599cafba84e5a"
+    },
+    {
+      "path": "GeoStep/analyze_followup.py",
+      "source": "archived research implementation",
+      "sha256": "37d3d0aad8e1cf40b6adadbac8910a3d91e3f6cd2c69c634f8fe3cf9b498661e"
+    },
+    {
+      "path": "GeoStep/analyze_matched.py",
+      "source": "archived research implementation",
+      "sha256": "348fc31e8cb6366d47c9c6a796163599a8026364f2ec316117cfa56dc0936e80"
+    },
+    {
+      "path": "GeoStep/analyze_results.py",
+      "source": "archived research implementation",
+      "sha256": "97171c414af8a9b33b5eb98455479b7ed8fb23882dd3a197286fba31c0be18c3"
+    },
+    {
+      "path": "GeoStep/capacity15_models.py",
+      "source": "archived research implementation",
+      "sha256": "96d73b7fbde30bcbf50e0686f0282f49ecca9dc1b670f17352593af0f5899868"
+    },
+    {
+      "path": "GeoStep/capacity_models.py",
+      "source": "archived research implementation",
+      "sha256": "29f7fb0eb990ae209b167033d0a78adc935a8011d136eda0ce0db8e9fad32376"
+    },
+    {
+      "path": "GeoStep/compare_capacity.py",
+      "source": "archived research implementation",
+      "sha256": "a451f4cf7919c77ea8eaddc3d103b36ca6b675e2cfce159d5385e04f40a0c8cf"
+    },
+    {
+      "path": "GeoStep/compare_capacity15.py",
+      "source": "archived research implementation",
+      "sha256": "8b415c35b835fd5f62889b9043381524c26a3492954e45a5e27f484abc734114"
+    },
+    {
+      "path": "GeoStep/compare_regression15.py",
+      "source": "archived research implementation",
+      "sha256": "133ac7f595369d4c39e0a6d0025364cd28f63ea286d1016c0b7f33b2ff1aa3c1"
+    },
+    {
+      "path": "GeoStep/compare_regression15_seed1.py",
+      "source": "archived research implementation",
+      "sha256": "56037d15010f7692384145ee914c0837d91895b944d33eaa56c34eb5245715ac"
+    },
+    {
+      "path": "GeoStep/continue30k.py",
+      "source": "archived research implementation",
+      "sha256": "00d09e704ddfc5cc76db88e08f6636c4f0e3cc9e6383b044dbbddb215dce7ac0"
+    },
+    {
+      "path": "GeoStep/evaluate_iid_noise.py",
+      "source": "archived research implementation",
+      "sha256": "c909b0a0c2f4342f4db72696a1372d53cca47fab2bf378803a4a88ad1b2d600e"
+    },
+    {
+      "path": "GeoStep/followup.py",
+      "source": "archived research implementation",
+      "sha256": "6f984f674025a7f1c7fdd286949dac86eccaa93b4606b64e1a32aea2eb2609cd"
+    },
+    {
+      "path": "GeoStep/geostep_per_image_win_rates.py",
+      "source": "archived research implementation",
+      "sha256": "fdcae18985629fb8d098c50071320618d4a66e226a3c33007f136c99478120e8"
+    },
+    {
+      "path": "GeoStep/matched_masks.py",
+      "source": "archived research implementation",
+      "sha256": "be68b6ad389cad37f84789ff046891d574de0819db55f3bd095e1801447e0cdf"
+    },
+    {
+      "path": "GeoStep/official_test_v9.py",
+      "source": "archived research implementation",
+      "sha256": "01ca3d9fd62bc1dedab37ca80d42379b5b9c32fd5d06ad69820b6a167f1c3b2f"
+    },
+    {
+      "path": "GeoStep/perceptual15_loss.py",
+      "source": "archived research implementation",
+      "sha256": "083d1cd1f3ea523b3230158c31e91e09ffd0a7744b0eb13a7ef1ebff814df48c"
+    },
+    {
+      "path": "GeoStep/perceptual15_pipeline.py",
+      "source": "archived research implementation",
+      "sha256": "0376fc042da3604a7446667712a908296c604c4bbaf9b31e381277f1fbb8cb2e"
+    },
+    {
+      "path": "GeoStep/pilot.py",
+      "source": "archived research implementation",
+      "sha256": "9f5a7fbed6f2811d6aa103a86cb3e8ce7a94a76093b4cf7ae4cd4316484e54f3"
+    },
+    {
+      "path": "GeoStep/preflight_perceptual15.py",
+      "source": "archived research implementation",
+      "sha256": "328ebe5ad00ceb50786c089ae70d1d265767ebf2b160506fc015349a2b04768b"
+    },
+    {
+      "path": "GeoStep/preflight_regression15.py",
+      "source": "archived research implementation",
+      "sha256": "4c798621b563932732e19903bf1347f76a3cb76a1d107f5e889174f1fbd75b0f"
+    },
+    {
+      "path": "GeoStep/preflight_regression15_seed1.py",
+      "source": "archived research implementation",
+      "sha256": "055fd2a822ce935bd27a637fcdc14cffeb20dd6368ec2d0658ce60f8afdd0b57"
+    },
+    {
+      "path": "GeoStep/preflight_seed1_v8.py",
+      "source": "archived research implementation",
+      "sha256": "356b0b12651bba7b0d65d9857a8e7153fbf8595ae3e4365f737f55d9a04153e5"
+    },
+    {
+      "path": "GeoStep/reevaluate_regression_matched.py",
+      "source": "archived research implementation",
+      "sha256": "9e2c618bad0c92bd614326501a17fa682d660a1a474a8547ea3779c1399c887d"
+    },
+    {
+      "path": "GeoStep/regression15_eval.py",
+      "source": "archived research implementation",
+      "sha256": "c1a696571e1c62136504bec692e9fb19dd8a9a6ad5089aa8000b5ef19e97286c"
+    },
+    {
+      "path": "GeoStep/seed1_pipeline.py",
+      "source": "archived research implementation",
+      "sha256": "ea430f50d95a1ed55e7393ce41276491ef0ceaab9fdf492db81092f3228b3e1e"
+    },
+    {
+      "path": "GeoStep/select_render_geostep_qualitative.py",
+      "source": "archived research implementation",
+      "sha256": "adb1110211b78c3f71c397c097b69ae86a4b15f82979bfdca4819faf3449cf52"
+    },
+    {
+      "path": "GeoStep/train_capacity15.py",
+      "source": "archived research implementation",
+      "sha256": "890476ae6b31dd7c6f40b38e88640945ed7d0154bba0ce06741c86536e44337f"
+    },
+    {
+      "path": "GeoStep/train_capacity15_seed1.py",
+      "source": "archived research implementation",
+      "sha256": "b3166dfd9b2274fb38c05287da944d5ed9e70f063117ccfd487f07d67129400f"
+    },
+    {
+      "path": "GeoStep/train_matched.py",
+      "source": "archived research implementation",
+      "sha256": "af79af281ef4fd9b9764bb98deec09e397a058de7e82d549bdbdb997214907f3"
+    },
+    {
+      "path": "GeoStep/train_perceptual15.py",
+      "source": "archived research implementation",
+      "sha256": "4da68ed38bbb66ac156b9e608b111b009e3cb046ddd0fc5f76b622e8a0accae9"
+    },
+    {
+      "path": "GeoStep/train_regression15.py",
+      "source": "archived research implementation",
+      "sha256": "1c620441eb259fddf238399983316831e6a661868b89eaf1d83aa65ef3b9fe30"
+    },
+    {
+      "path": "GeoStep/train_regression15_seed1.py",
+      "source": "archived research implementation",
+      "sha256": "9b1737647981eb935ce98d076d338b49d304f826e38f8653825e3245a42b84fb"
+    },
+    {
+      "path": "GeoStep/train_wide.py",
+      "source": "archived research implementation",
+      "sha256": "6daec85fa688f7c8a686bef2bc42f9f3a4107ae2e3d89eee71331184dfac28c0"
+    },
+    {
+      "path": "GeoStep/verify30k.py",
+      "source": "archived research implementation",
+      "sha256": "2c1c132a226096fe86f3c8ddd4b28f9ec794f5a829cf91137ee2b48800e07f2a"
+    },
+    {
+      "path": "GeoStep/verify_capacity15.py",
+      "source": "archived research implementation",
+      "sha256": "a35fe96d6bdebc647902a6937ec40c2613f9984f3b90c716bdbd274ccc99b88a"
+    },
+    {
+      "path": "GeoStep/verify_capacity15_seed1.py",
+      "source": "archived research implementation",
+      "sha256": "2570cee20734421ea8dcf917ec078240e8a6a8e9cb74bdcc3b24bc691d08fafc"
+    },
+    {
+      "path": "GeoStep/verify_followup.py",
+      "source": "archived research implementation",
+      "sha256": "669c5d61cd2512e6aa95b4684c6dfb7c1435ada13312570094eaf3f185d0b6be"
+    },
+    {
+      "path": "GeoStep/verify_matched.py",
+      "source": "archived research implementation",
+      "sha256": "adda358c2b4665467c40fe975f4f3dcd57b62d8e8ad6ef9536db1634aaaf8856"
+    },
+    {
+      "path": "GeoStep/verify_perceptual15.py",
+      "source": "archived research implementation",
+      "sha256": "e0f5b8eb58cc4f9f4e1c4eeaf72f17565491771e0855f0f1865ecd80ebc7ed1b"
+    },
+    {
+      "path": "GeoStep/verify_pilot.py",
+      "source": "archived research implementation",
+      "sha256": "96f7144c42bb50f966e9993de9872be7e60a6c0d04365291da1d815876900a62"
+    },
+    {
+      "path": "GeoStep/verify_regression15.py",
+      "source": "archived research implementation",
+      "sha256": "605473550642695e69eae33fd1a0b065e26319a74bc31e81fc89a05880e35b91"
+    },
+    {
+      "path": "GeoStep/verify_regression15_seed1.py",
+      "source": "archived research implementation",
+      "sha256": "410c63afbb4dc1366df1958b169cd69c29868b70747803d168d811830bc858e0"
+    },
+    {
+      "path": "GeoStep/verify_wide.py",
+      "source": "archived research implementation",
+      "sha256": "a04798ebc76a3b3ad71d58f5543886f588de5e1fbb9e2c74c72ce283630546aa"
+    },
+    {
+      "path": "GeoStep/capacity15_protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "a0c82a971b2ab8c787ba3fa7463dda9ee085b3c43e13c6a58d6eb63318e876e0"
+    },
+    {
+      "path": "GeoStep/capacity15_seed1_protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "1c9fa5ebd87247cf383d249085ba1a6bd4cffefeb841177856b709e4e6575d0a"
+    },
+    {
+      "path": "GeoStep/continuation30k_protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "2e2ed03dd8b29f56b28aba62889f4ae3f0493bc752e64975f8ad15f340c352f1"
+    },
+    {
+      "path": "GeoStep/data_manifest.json",
+      "source": "archived protocol or data identity",
+      "sha256": "5b6fb5cd0212c54964383ab7e6299c30cbc0620dbcf2c003bac8c5b15f8e4f3f"
+    },
+    {
+      "path": "GeoStep/followup_protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "1ce79c50eea67cc8d877b7c38f1babf3e2f692b0e9a885c9148b49eb40f119af"
+    },
+    {
+      "path": "GeoStep/matched_mask_protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "cb6daf2ec79a65330657490790a0055bdc0bc9c51457e69775f29b548f0e1cfd"
+    },
+    {
+      "path": "GeoStep/official_test_protocol_v9.json",
+      "source": "archived protocol or data identity",
+      "sha256": "6f107fbd0c2ffca3a7474df07ffd68b84834389ba930fb3cf9f3d08aadd48709"
+    },
+    {
+      "path": "GeoStep/perceptual15_protocol_v10.json",
+      "source": "archived protocol or data identity",
+      "sha256": "9f150d259b0f4bff16e8341c8002dbcb8e125c6fcb3d66840ac2736983adae38"
+    },
+    {
+      "path": "GeoStep/protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "dd301d17f50fe998f145a873b21236becd3e1afbbbd90ad6f38bd1fe35bc1535"
+    },
+    {
+      "path": "GeoStep/regression15_protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "87fca5e995f68361dba0c591b78bfcabdced850d82f07542acf4f2b3c7abf46b"
+    },
+    {
+      "path": "GeoStep/regression15_seed1_protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "581337e5999fdb28367ca6048b4a6a2c367fb3dfc1a2021c997ef81004a783b2"
+    },
+    {
+      "path": "GeoStep/wide_capacity_protocol.json",
+      "source": "archived protocol or data identity",
+      "sha256": "a42081c4998c556fc39210550aca9595f56bc1dce9d0c26f2926ca2a2c1e16eb"
+    },
+    {
+      "path": "data/splits.csv",
+      "source": "frozen inherited image split manifest",
+      "sha256": "dfa10dadae4ebae46170edc7e38c3206975de8e675e9a4c4bb8be1d3ab12d51c"
+    },
+    {
+      "path": "results/test_summary.json",
+      "source": "archived v10 aggregate results",
+      "sha256": "6ace6f0a2c622580731ce30d906c2f7a1449a79ca90bbe497bfff7d7a9d8ef8f"
+    },
+    {
+      "path": "results/latency.json",
+      "source": "archived v10 aggregate results",
+      "sha256": "d150aeafc5f9b68889b39b074e9a8fe99912db33f536b1f127f248da0d2a0b02"
+    },
+    {
+      "path": "results/perceptual_selection.json",
+      "source": "archived v10 aggregate results",
+      "sha256": "589d169e06751ea79708a51d33521993bc2c071abc76e1bb54b65996b2143d2d"
+    },
+    {
+      "path": "results/perceptual_calibration.json",
+      "source": "archived v10 aggregate results",
+      "sha256": "ed384b32934c8e73104fab8faf9b82edde216677e8107502451ec7de764e3521"
+    },
+    {
+      "path": "results/pixel_vs_fm_comparison.json",
+      "source": "archived v9 paired image-bootstrap results",
+      "sha256": "35672bd1d1ed076076b6952aa938375765ce504274e8f3e0968ea5e47449b186"
+    },
+    {
+      "path": "results/development/figures_nfe_source.csv",
+      "source": "archived paper figure source data",
+      "sha256": "83f8543c4fdfdd8c3fd4fc9fcaf40f5140a3a77501bcf52a9e57c92b9f4be066"
+    },
+    {
+      "path": "results/development/figures_task_learning.csv",
+      "source": "archived paper figure source data",
+      "sha256": "16ed9603b87f119690be2171c061be9aaf4e722dbf2dad6068f1056540b79949"
+    },
+    {
+      "path": "results/development/figures_training_objectives.csv",
+      "source": "archived paper figure source data",
+      "sha256": "24a0f9040fb3eb6b62dffd5a088792019a1369371cb7e1164c625cfbad8be2f5"
+    },
+    {
+      "path": "results/development/capacity_resources.csv",
+      "source": "archived supplementary figure source data",
+      "sha256": "28b71176bb5029b15c234792cce117bcd87778aa387d348686ca5b401a200668"
+    },
+    {
+      "path": "results/development/capacity_seed0.csv",
+      "source": "archived supplementary figure source data",
+      "sha256": "bbb3705e2299a9e63d07870187d51400dc11a0727efa3e2ecc392a979dd24e86"
+    },
+    {
+      "path": "results/development/fm_time_bins_30k.csv",
+      "source": "archived supplementary figure source data",
+      "sha256": "4b547e32cfdfb2f89c5dbfd099279991895959b2ef2416f6efdf75062da7b5d2"
+    },
+    {
+      "path": "results/development/learning_summary.csv",
+      "source": "archived supplementary figure source data",
+      "sha256": "910c72079bac294a17152107a27e002803208eb6cdf5a814b8c14990e04cd5ea"
+    },
+    {
+      "path": "results/development/nfe_sweep_dev.csv",
+      "source": "archived supplementary figure source data",
+      "sha256": "17b830144151f04e1f75321e6760b6ffa61b206e7ef1df6f464ba9954bd553f9"
+    },
+    {
+      "path": "results/development/task_learning_pair0.csv",
+      "source": "archived supplementary figure source data",
+      "sha256": "311b9bcfc063119dc43dd910004385f1174d35e347a381f97b22a395da9b4164"
+    },
+    {
+      "path": "results/development/training_objectives.csv",
+      "source": "archived supplementary figure source data",
+      "sha256": "87cb55495a1ff2ab43593d7e055c44ee3f4d75ea6f7ad5b55d01416a2fbf480e"
+    },
+    {
+      "path": "requirements.txt",
+      "source": "recorded direct dependencies",
+      "sha256": "7617da7aa6b365b3990542261b79c294db04f58e6e82fe4af9727fa2ccced403"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+# Direct dependencies, not a fully locked environment.
+# Recorded training build: torch 2.7.1+cu128 on an RTX 4090.
+# Install a CUDA-compatible torch/torchvision pair for the target Linux system.
+torch==2.7.1
+torchvision
+numpy
+scipy
+Pillow
+matplotlib
+lpips==0.1.4

@@ -1,0 +1,65 @@
+[
+  {
+    "geometry": "large",
+    "model": "MSE Regression",
+    "lpips_truth": 0.13733320301554505,
+    "sample_psnr": 15.461255605283974,
+    "ssim_full": 0.6281831384484489
+  },
+  {
+    "geometry": "large",
+    "model": "Perceptual Regression",
+    "lpips_truth": 0.12429264854546246,
+    "sample_psnr": 15.28723446338579,
+    "ssim_full": 0.6226130335754098
+  },
+  {
+    "geometry": "large",
+    "model": "FM8",
+    "lpips_truth": 0.11347915706133166,
+    "sample_psnr": 15.49010011677629,
+    "ssim_full": 0.6314583645445117
+  },
+  {
+    "geometry": "fragmented",
+    "model": "MSE Regression",
+    "lpips_truth": 0.1250462299854478,
+    "sample_psnr": 16.349861282717068,
+    "ssim_full": 0.6626298919808499
+  },
+  {
+    "geometry": "fragmented",
+    "model": "Perceptual Regression",
+    "lpips_truth": 0.1166313870327425,
+    "sample_psnr": 16.157799255016627,
+    "ssim_full": 0.6554606866335686
+  },
+  {
+    "geometry": "fragmented",
+    "model": "FM8",
+    "lpips_truth": 0.09894655900715099,
+    "sample_psnr": 16.82873103725029,
+    "ssim_full": 0.6778084260909045
+  },
+  {
+    "geometry": "overall",
+    "model": "MSE Regression",
+    "lpips_truth": 0.1311897165004964,
+    "sample_psnr": 15.90555844400052,
+    "ssim_full": 0.6454065152146493
+  },
+  {
+    "geometry": "overall",
+    "model": "Perceptual Regression",
+    "lpips_truth": 0.12046201778910248,
+    "sample_psnr": 15.722516859201207,
+    "ssim_full": 0.6390368601044891
+  },
+  {
+    "geometry": "overall",
+    "model": "FM8",
+    "lpips_truth": 0.10621285803424133,
+    "sample_psnr": 16.15941557701329,
+    "ssim_full": 0.6546333953177081
+  }
+]

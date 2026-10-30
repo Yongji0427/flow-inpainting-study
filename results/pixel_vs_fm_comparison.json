@@ -1,0 +1,218 @@
+[
+  {
+    "seed": 0,
+    "geometry": "large",
+    "metric": "lpips_truth",
+    "regression_mean": 0.13729327268316574,
+    "fm_mean": 0.11351350875729838,
+    "fm_gain": 0.02377976392586735,
+    "ci95": [
+      0.023145775601515907,
+      0.024414702963474956
+    ]
+  },
+  {
+    "seed": 0,
+    "geometry": "large",
+    "metric": "sample_psnr",
+    "regression_mean": 15.485848665935723,
+    "fm_mean": 15.490884774266593,
+    "fm_gain": 0.005036108330868943,
+    "ci95": [
+      -0.02600771590672444,
+      0.03607307620294589
+    ]
+  },
+  {
+    "seed": 0,
+    "geometry": "fragmented",
+    "metric": "lpips_truth",
+    "regression_mean": 0.12486819438324563,
+    "fm_mean": 0.09864397241215701,
+    "fm_gain": 0.02622422197108862,
+    "ci95": [
+      0.025641068040449796,
+      0.026805219545053133
+    ]
+  },
+  {
+    "seed": 0,
+    "geometry": "fragmented",
+    "metric": "sample_psnr",
+    "regression_mean": 16.357335119234136,
+    "fm_mean": 16.82558945053292,
+    "fm_gain": 0.4682543312987856,
+    "ci95": [
+      0.43765497486794175,
+      0.499625535390367
+    ]
+  },
+  {
+    "seed": 0,
+    "geometry": "overall",
+    "metric": "lpips_truth",
+    "regression_mean": 0.13108073353320568,
+    "fm_mean": 0.10607874058472769,
+    "fm_gain": 0.025001992948477988,
+    "ci95": [
+      0.024424838881091784,
+      0.025571936526557565
+    ]
+  },
+  {
+    "seed": 0,
+    "geometry": "overall",
+    "metric": "sample_psnr",
+    "regression_mean": 15.92159189258493,
+    "fm_mean": 16.158237112399757,
+    "fm_gain": 0.23664521981482725,
+    "ci95": [
+      0.20743331593782166,
+      0.26596184144666835
+    ]
+  },
+  {
+    "seed": 1,
+    "geometry": "large",
+    "metric": "lpips_truth",
+    "regression_mean": 0.13737313334792436,
+    "fm_mean": 0.11344480536536494,
+    "fm_gain": 0.023928327982559425,
+    "ci95": [
+      0.023281247788492065,
+      0.024570869629330104
+    ]
+  },
+  {
+    "seed": 1,
+    "geometry": "large",
+    "metric": "sample_psnr",
+    "regression_mean": 15.436662544632224,
+    "fm_mean": 15.489315459285987,
+    "fm_gain": 0.052652914653762116,
+    "ci95": [
+      0.021406679588215453,
+      0.08378732034850814
+    ]
+  },
+  {
+    "seed": 1,
+    "geometry": "fragmented",
+    "metric": "lpips_truth",
+    "regression_mean": 0.12522426558764993,
+    "fm_mean": 0.09924914560214496,
+    "fm_gain": 0.02597511998550496,
+    "ci95": [
+      0.025379798794593896,
+      0.02655942639014833
+    ]
+  },
+  {
+    "seed": 1,
+    "geometry": "fragmented",
+    "metric": "sample_psnr",
+    "regression_mean": 16.3423874462,
+    "fm_mean": 16.83187262396766,
+    "fm_gain": 0.48948517776765915,
+    "ci95": [
+      0.4579087256487443,
+      0.5206779208625544
+    ]
+  },
+  {
+    "seed": 1,
+    "geometry": "overall",
+    "metric": "lpips_truth",
+    "regression_mean": 0.13129869946778713,
+    "fm_mean": 0.10634697548375495,
+    "fm_gain": 0.024951723984032195,
+    "ci95": [
+      0.02435904217478358,
+      0.02553739715134238
+    ]
+  },
+  {
+    "seed": 1,
+    "geometry": "overall",
+    "metric": "sample_psnr",
+    "regression_mean": 15.889524995416112,
+    "fm_mean": 16.160594041626823,
+    "fm_gain": 0.27106904621071065,
+    "ci95": [
+      0.2416310666948349,
+      0.3007520309697468
+    ]
+  },
+  {
+    "seed": "mean_of_2_seeds",
+    "geometry": "large",
+    "metric": "lpips_truth",
+    "regression_mean": 0.13733320301554505,
+    "fm_mean": 0.11347915706133166,
+    "fm_gain": 0.02385404595421339,
+    "ci95": [
+      0.023313001337524657,
+      0.024396326999925923
+    ]
+  },
+  {
+    "seed": "mean_of_2_seeds",
+    "geometry": "large",
+    "metric": "sample_psnr",
+    "regression_mean": 15.461255605283974,
+    "fm_mean": 15.49010011677629,
+    "fm_gain": 0.02884451149231553,
+    "ci95": [
+      0.004533265154897086,
+      0.05349327138943318
+    ]
+  },
+  {
+    "seed": "mean_of_2_seeds",
+    "geometry": "fragmented",
+    "metric": "lpips_truth",
+    "regression_mean": 0.1250462299854478,
+    "fm_mean": 0.09894655900715098,
+    "fm_gain": 0.026099670978296793,
+    "ci95": [
+      0.02559326154130675,
+      0.026598992177398584
+    ]
+  },
+  {
+    "seed": "mean_of_2_seeds",
+    "geometry": "fragmented",
+    "metric": "sample_psnr",
+    "regression_mean": 16.349861282717068,
+    "fm_mean": 16.82873103725029,
+    "fm_gain": 0.47886975453322234,
+    "ci95": [
+      0.45294323618608207,
+      0.5050999836725503
+    ]
+  },
+  {
+    "seed": "mean_of_2_seeds",
+    "geometry": "overall",
+    "metric": "lpips_truth",
+    "regression_mean": 0.1311897165004964,
+    "fm_mean": 0.10621285803424133,
+    "fm_gain": 0.02497685846625509,
+    "ci95": [
+      0.02447593413594142,
+      0.025474632162335045
+    ]
+  },
+  {
+    "seed": "mean_of_2_seeds",
+    "geometry": "overall",
+    "metric": "sample_psnr",
+    "regression_mean": 15.90555844400052,
+    "fm_mean": 16.15941557701329,
+    "fm_gain": 0.25385713301276897,
+    "ci95": [
+      0.2301129704767856,
+      0.27767850152639
+    ]
+  }
+]

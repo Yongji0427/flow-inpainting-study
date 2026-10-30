@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.pytest_cache/
+*.pt
+*.pth
+*.ckpt
+*.log
+*.jsonl
+.env
+.env.*
+GeoStep/runs/
+GeoStep/matched_masks_v4/
+GeoStep/prepared*
+.cache/

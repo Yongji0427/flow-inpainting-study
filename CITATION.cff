@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this code or the archived results, please cite this repository."
+type: software
+title: "One Flow, Two Notions of Quality: Sampling Budgets for Image Inpainting — Code and Archived Results"
+authors:
+  - family-names: Chen
+    given-names: Yongji
+  - family-names: You
+    given-names: Kaichun
+  - family-names: Zhang
+    given-names: Linwei
+  - family-names: Tang
+    given-names: Zijun
+repository-code: "https://github.com/Yongji0427/flow-inpainting-study"
+date-released: 2026-10-30

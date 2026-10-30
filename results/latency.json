@@ -1,0 +1,47 @@
+{
+  "rows": [
+    {
+      "model": "Perceptual Regression",
+      "batch_size": 1,
+      "nfe": 1,
+      "batch_median_ms": 3.818351775407791,
+      "batch_p95_ms": 3.9376264438033104
+    },
+    {
+      "model": "Perceptual Regression",
+      "batch_size": 64,
+      "nfe": 1,
+      "batch_median_ms": 19.0836563706398,
+      "batch_p95_ms": 19.115895964205265
+    },
+    {
+      "model": "MSE Regression",
+      "batch_size": 1,
+      "nfe": 1,
+      "batch_median_ms": 3.767460584640503,
+      "batch_p95_ms": 3.8918714970350266
+    },
+    {
+      "model": "MSE Regression",
+      "batch_size": 64,
+      "nfe": 1,
+      "batch_median_ms": 19.08465474843979,
+      "batch_p95_ms": 19.1078819334507
+    },
+    {
+      "model": "FM8",
+      "batch_size": 1,
+      "nfe": 8,
+      "batch_median_ms": 28.414174914360046,
+      "batch_p95_ms": 28.713487833738327
+    },
+    {
+      "model": "FM8",
+      "batch_size": 64,
+      "nfe": 8,
+      "batch_median_ms": 149.5238784700632,
+      "batch_p95_ms": 149.6662214398384
+    }
+  ],
+  "protocol": "same4090 BF16 predict, 5 warmups20 synchronized repetitions; one generated sample/image; no VGG feature extractor at inference; GPU inputs no I/O or quality metrics"
+}
