@@ -1,0 +1,21 @@
+{
+  "scope": "Final submitted PDFs and archived qualitative display inputs. No new model evaluation.",
+  "files": [
+    {
+      "path": "paper/OneFlow_Report.pdf",
+      "sha256": "65a7812a8c3808b5b16a4a07704957a4b98fc75d6f93736670f353eff73ab71c"
+    },
+    {
+      "path": "paper/OneFlow_Supplementary.pdf",
+      "sha256": "5ab0f3f79f3eb0b20b0b122b9c2259a368b5ce2180c63619fe8d41e63c90617d"
+    },
+    {
+      "path": "results/qualitative/test_qualitative_tiles.npz",
+      "sha256": "ceff6bb4800133a2fd062b0649efe6f276a1234ba8b6f35769835351f43a37b9"
+    },
+    {
+      "path": "results/qualitative/test_qualitative_provenance.json",
+      "sha256": "908195a3fca2b5162f05c3db6fcce135316760f04a9de69424ecb14e30fad859"
+    }
+  ]
+}

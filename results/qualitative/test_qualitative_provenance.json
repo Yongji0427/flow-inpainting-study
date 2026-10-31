@@ -1,0 +1,129 @@
+{
+  "rows": [
+    {
+      "selection": "lowest_two_geometry_mean_fm_lpips_visually_checked",
+      "geometry": "large",
+      "retained_image_index": 0,
+      "image_id": "Abyssinian_2",
+      "mask_pair": 0,
+      "training_seed": 0,
+      "display_noise_index": 0,
+      "saved_condition_metrics": {
+        "fm": {
+          "lpips_truth": 0.05867573618888855,
+          "sample_psnr": 29.619308471679688
+        },
+        "regression": {
+          "lpips_truth": 0.14569102227687836,
+          "sample_psnr": 22.053199768066406
+        },
+        "perceptual_regression": {
+          "lpips_truth": 0.11066029220819473,
+          "sample_psnr": 21.440916061401367
+        }
+      }
+    },
+    {
+      "selection": "lowest_two_geometry_mean_fm_lpips_visually_checked",
+      "geometry": "fragmented",
+      "retained_image_index": 0,
+      "image_id": "Abyssinian_2",
+      "mask_pair": 0,
+      "training_seed": 0,
+      "display_noise_index": 0,
+      "saved_condition_metrics": {
+        "fm": {
+          "lpips_truth": 0.04629558324813843,
+          "sample_psnr": 30.655475616455078
+        },
+        "regression": {
+          "lpips_truth": 0.13469238579273224,
+          "sample_psnr": 23.838712692260742
+        },
+        "perceptual_regression": {
+          "lpips_truth": 0.09989066421985626,
+          "sample_psnr": 21.86713981628418
+        }
+      }
+    },
+    {
+      "selection": "maximum_saved_fm_lpips_per_geometry",
+      "geometry": "large",
+      "retained_image_index": 2,
+      "image_id": "Abyssinian_201",
+      "mask_pair": 0,
+      "training_seed": 0,
+      "display_noise_index": 0,
+      "saved_condition_metrics": {
+        "fm": {
+          "lpips_truth": 0.12448177486658096,
+          "sample_psnr": 13.675058364868164
+        },
+        "regression": {
+          "lpips_truth": 0.13833029568195343,
+          "sample_psnr": 13.613848686218262
+        },
+        "perceptual_regression": {
+          "lpips_truth": 0.1291871815919876,
+          "sample_psnr": 13.082107543945312
+        }
+      }
+    },
+    {
+      "selection": "maximum_saved_fm_lpips_per_geometry",
+      "geometry": "fragmented",
+      "retained_image_index": 2,
+      "image_id": "Abyssinian_201",
+      "mask_pair": 0,
+      "training_seed": 0,
+      "display_noise_index": 0,
+      "saved_condition_metrics": {
+        "fm": {
+          "lpips_truth": 0.12094146013259888,
+          "sample_psnr": 14.169829368591309
+        },
+        "regression": {
+          "lpips_truth": 0.14956170320510864,
+          "sample_psnr": 13.921283721923828
+        },
+        "perceptual_regression": {
+          "lpips_truth": 0.11198469996452332,
+          "sample_psnr": 13.920295715332031
+        }
+      }
+    }
+  ],
+  "columns": [
+    "Ground truth",
+    "Masked input",
+    "MSE Regression",
+    "Perceptual Regression",
+    "FM8"
+  ],
+  "pool": "first three retained official-test images, two geometries, mask pair zero, seed zero",
+  "selection_rules": [
+    "lowest average FM LPIPS over the two geometries among the three archived images, then visually checked",
+    "maximum saved-condition FM LPIPS in each geometry among the three archived images"
+  ],
+  "display": "Noise index zero; selection metrics average four fixed noise samples, not the displayed sample alone.",
+  "scope": "Illustrative favorable and failure cases from three archived images; not a full-test failure-rate or worst-case estimate.",
+  "image_integrity": "No crop or color/contrast adjustment; identical [-1,1] to [0,1] display mapping and nearest-neighbor rendering for all panels.",
+  "verification": "Rechecked JPEG/pixel/mask hashes, preserved known pixels, stored MSE/PSNR arithmetic and saved LPIPS entries; no model inference.",
+  "source_sha256": {
+    "runs/official_test_two_seeds_v9/image_mask_metadata.json": "12a079d9b87b51721c32c272c17e99a9ffe8ca1c93c3d45e7121977c9e0cfa26",
+    "runs/official_test_two_seeds_v9/mask_audit.json": "fe5acad761dc3cdfba00c2ffabacd03c4519bdcf528c89ea9dfb2d0ef27b1ec4",
+    "matched_masks.py": "be68b6ad389cad37f84789ff046891d574de0819db55f3bd095e1801447e0cdf",
+    "runs/official_test_two_seeds_v9/fm_seed0/fm_step30000_final_rows.json": "601244c638e329372bfa323cc74d02d97587753b499237c118448d139148ee31",
+    "runs/official_test_two_seeds_v9/regression_seed0/regression_step30000_final_rows.json": "436bd1bdc998bee06e9a487393c6bfa856020dc05a60d00b18e60720e4a0df9b",
+    "runs/perceptual_regression_30k_v10/post_test_evaluation/seed0/regression_step30000_final_rows.json": "c07bb8825da7eae30cff42199bb9ba5fedb362d0f912e9562450813a88dbfd87",
+    "runs/official_test_two_seeds_v9/fm_seed0/fm_step30000_final_examples.npz": "7e634647ce0eb9ed44ac65da573445dc137a9c9936220b78ecf01277427a89b4",
+    "runs/official_test_two_seeds_v9/regression_seed0/regression_step30000_final_examples.npz": "a8f8c8936bf9525f6ad1ad4c054577d80d1319413850b5802fe66796de7f2ff9",
+    "runs/perceptual_regression_30k_v10/post_test_evaluation/seed0/regression_step30000_final_examples.npz": "b2c7158e47cc6ffefb90ebb232368468eb97f24d1c05df691932138c99bfc10e",
+    "report/main_source_data/figures_example_selection.json": "3884831553d5f3d838edf6507d54a5682ade511b0225dc1ef49acf9185911fe8",
+    "report/main_source_data/figures_failure_example_selection.json": "5895c9121308f20c541459fbb3b1e921f664ddbc8665eaeb27ecc9f3071387ec",
+    "report/main_source_data/figures_inputs/Abyssinian_2.jpg": "f85800d6ae357882e6f69e2f9acc1d88367a63454ec63896593fa9007ff40b43",
+    "report/main_source_data/figures_inputs/Abyssinian_2_fit64.png": "a446747601a8f766363af109e125f25a521f67588e50c6ca28d840e2e822ee85",
+    "report/main_source_data/figures_inputs/Abyssinian_201.jpg": "af5e24d564321c9233c06c02497c08bf164a9a72acf8e8e287ac1bfc6f9cd321",
+    "report/main_source_data/figures_inputs/Abyssinian_201_fit64.png": "c96072daea941433fb9353e0e242da033ab3110853bdf04bb13d11210ee2775d"
+  }
+}

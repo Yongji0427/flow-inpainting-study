@@ -1,0 +1,23 @@
+{
+  "source_file": "results/development/figures_nfe_source.csv",
+  "source_sha256": "83f8543c4fdfdd8c3fd4fc9fcaf40f5140a3a77501bcf52a9e57c92b9f4be066",
+  "original_source": "results/development/figures_nfe_source.csv",
+  "split": "development",
+  "images": 124,
+  "training_seeds": [
+    0,
+    1
+  ],
+  "geometries": [
+    "large",
+    "fragmented"
+  ],
+  "mask_pairs_per_image": 4,
+  "noise_samples_per_condition": 4,
+  "aggregation": "Arithmetic mean of the four archived seed-by-geometry means at each NFE. Scores, not generated images, were averaged upstream.",
+  "normalization": "After seed/geometry averaging, PSNR=(x-min)/(max-min); LPIPS=(max-x)/(max-min), over the six plotted NFE settings.",
+  "uncertainty": "Only means shown. No error bands or confidence intervals added.",
+  "outputs": "fig01b_sampling_budget shows normalized mean quality. PDF/SVG contain vector lines and text.",
+  "new_inference": false,
+  "manuscript_replaced": true
+}

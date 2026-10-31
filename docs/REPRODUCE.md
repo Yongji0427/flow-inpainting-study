@@ -4,12 +4,12 @@
 
 1. `python scripts/check_release.py` checks the source/data manifest, Python syntax, local imports, split counts, and key aggregate-result relationships. It uses the standard library and writes no experiment artifacts.
 2. `python scripts/show_results.py` prints the included test summaries and measured inference costs. It does not recompute metrics from images.
-3. `python scripts/plot_results.py` redraws the NFE and training-dynamics figures from archived CSV tables. It needs NumPy and Matplotlib, but no model weights or GPU.
+3. `python scripts/plot_results.py` redraws all nine manuscript plots (Figures 1b, 3-5 and S1-S5) from archived CSVs and qualitative display tiles. It needs NumPy and Matplotlib, but no model weights or GPU. See [the figure gallery](FIGURES.md) for the source of every panel.
 4. `python -m unittest discover -s tests -v` runs synthetic CPU implementation checks. It needs the model dependencies and does not download pretrained weights.
 
 ## What is not included
 
-Original images and annotations, prepared image caches, matched mask banks, trained checkpoints, most historical initialization/intermediate checkpoints, complete training logs, and full per-image prediction arrays are not shipped. The final training and evaluation entry points therefore require additional historical artifacts. The repository does not claim that the complete historical experiment can be recreated from this checkout alone.
+The full original image dataset and annotations, prepared image caches, matched mask banks, trained checkpoints, most historical initialization/intermediate checkpoints, complete training logs, and full per-image prediction arrays are not shipped. The 20 display tiles used in Figure 5 are included separately under `results/qualitative/`; they are not checkpoints or a full prediction archive. The final training and evaluation entry points therefore require additional historical artifacts. The repository does not claim that the complete historical experiment can be recreated from this checkout alone.
 
 ## Historical execution layout
 

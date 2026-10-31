@@ -24,4 +24,4 @@ Likewise, `protocol.json` describes the 2k pilot. The paper settings are specifi
 
 ## Results and public entry points
 
-Use `scripts/show_results.py` and `scripts/plot_results.py` for the published result package. Historical `analyze_*.py` and verification scripts expect full run directories not included here. They are retained for inspection, not advertised as fresh-clone commands.
+Use `scripts/show_results.py` for archived metrics and `scripts/plot_results.py` for all nine current manuscript plots. The three plotting implementations are `plot_quantitative_figures.py`, `plot_sampling_budget.py`, and `plot_qualitative_results.py` under `scripts/`. See [FIGURES.md](FIGURES.md) for their inputs and exports. Historical `analyze_*.py` and verification scripts expect full run directories not included here. They are retained for inspection, not advertised as fresh-clone commands.

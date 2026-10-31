@@ -1,0 +1,24 @@
+name: Archive and figure checks
+
+'on': [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  archive-and-figures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-figures.txt
+      - name: Check archived hashes, results, and documentation links
+        run: python scripts/check_release.py
+      - name: Install plotting dependencies
+        run: python -m pip install -r requirements-figures.txt
+      - name: Rebuild manuscript figures without models or downloads
+        run: python scripts/plot_results.py

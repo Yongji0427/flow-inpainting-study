@@ -18,7 +18,8 @@ def read_json(path):
 
 def main():
     manifest = read_json('provenance/source_manifest.json')
-    for row in manifest['files']:
+    paper_assets = read_json('provenance/paper_assets.json')
+    for row in manifest['files'] + paper_assets['files']:
         path = ROOT / row['path']
         assert path.is_file(), f'Missing archived file: {row["path"]}'
         assert hashlib.sha256(path.read_bytes()).hexdigest() == row['sha256'], row['path']
@@ -60,11 +61,15 @@ def main():
             assert int(min(group, key=lambda r: float(r['lpips']))['nfe']) == 8
             assert int(max(group, key=lambda r: float(r['psnr_db']))['nfe']) == 2
     for path in ROOT.rglob('*.md'):
-        for link in re.findall(r'\]\(([^)]+)\)', path.read_text()):
+        content = path.read_text()
+        links = re.findall(r'\]\(([^)]+)\)', content)
+        links += re.findall(r'(?:href|src)=[\"\']([^\"\']+)[\"\']', content)
+        for link in links:
             if '://' not in link and not link.startswith('#'):
                 target = link.split('#', 1)[0]
                 assert (path.parent / target).exists(), f'Broken link: {path.relative_to(ROOT)} -> {link}'
-    print(f'PASS: {len(manifest["files"])} archived hashes, Python/JSON syntax, split identity,')
+    print(f'PASS: {len(manifest["files"])} research hashes and {len(paper_assets["files"])} paper/display hashes,')
+    print('Python/JSON syntax, split identity,')
     print('aggregate arithmetic, four FM NFE profiles, and local documentation links.')
     print('No models were trained or evaluated. Historical runtime prerequisites are not verified here.')
 
