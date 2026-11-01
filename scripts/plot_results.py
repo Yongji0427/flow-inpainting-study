@@ -11,4 +11,4 @@ if __name__ == '__main__':
                    'plot_qualitative_results.py']:
         subprocess.run([sys.executable, str(SCRIPTS / script)], check=True)
     print('Rebuilt Figures 1b, 3-5 and S1-S5 in PDF, SVG and PNG.')
-    print('Figure 1a and Figure 2 are preserved artwork; no training or inference.')
+    print('Figure 1a is preserved artwork; Figure 2 has a separate HTML/SVG generator. No training or inference.')

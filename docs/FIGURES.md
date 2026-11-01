@@ -1,7 +1,8 @@
 # Figure gallery and source data
 
-The numbered files match the final [report](../paper/OneFlow_Report.pdf) and
-[supplement](../paper/OneFlow_Supplementary.pdf). Curves show seed means only;
+The numerical plots match the final [report](../paper/OneFlow_Report.pdf) and
+[supplement](../paper/OneFlow_Supplementary.pdf). Figure 2 is a redesigned repository
+diagram; the submitted PDFs retain their original framework figure. Curves show seed means only;
 individual seed values remain in the source tables. No error band is implied.
 
 Run all nine plots from the repository root:
@@ -12,8 +13,8 @@ python scripts/plot_results.py
 ```
 
 PDF, editable SVG and PNG exports are written to `figures/main/` and
-`figures/supplementary/`. Figure 1a and Figure 2 are supplied artwork and remain
-unchanged. No training, model inference, pretrained-weight download or GPU is needed.
+`figures/supplementary/`. Figure 1a is preserved supplied artwork. Figure 2 is maintained separately
+as an HTML/SVG diagram. No training, model inference, pretrained-weight download or GPU is needed.
 
 ## Main figures
 
@@ -21,7 +22,7 @@ unchanged. No training, model inference, pretrained-weight download or GPU is ne
 |---|---|---|---|
 | 1a: model comparison schematic | [PDF](../figures/main/fig01a_model_overview.pdf) | Preserved supplied artwork | Not regenerated |
 | 1b: sampling budget summary | [PDF](../figures/main/fig01b_sampling_budget.pdf) · [PNG](../figures/main/fig01b_sampling_budget.png) · [SVG](../figures/main/fig01b_sampling_budget.svg) | [Development NFE table](../results/development/figures_nfe_source.csv), [normalization](../results/figure_values/fig01b_provenance.json) | `scripts/plot_sampling_budget.py` |
-| 2: framework | [PNG](../figures/main/fig02_framework.png) | Preserved supplied artwork | Not regenerated |
+| 2: repository framework | [PNG](../figures/main/fig02_framework.png) · [SVG](../figures/main/fig02_framework.svg) · [HTML](../figures/main/fig02_framework.html) | Report Approach section and [archived input tiles](../results/qualitative/test_qualitative_tiles.npz) | `scripts/build_framework.py` |
 | 3: NFE and quality | [PDF](../figures/main/fig03_nfe_quality.pdf) · [PNG](../figures/main/fig03_nfe_quality.png) · [SVG](../figures/main/fig03_nfe_quality.svg) | [Development NFE table](../results/development/figures_nfe_source.csv) | `scripts/plot_quantitative_figures.py` |
 | 4: training dynamics | [PDF](../figures/main/fig04_training_dynamics.pdf) · [PNG](../figures/main/fig04_training_dynamics.png) · [SVG](../figures/main/fig04_training_dynamics.svg) | [EMA objectives](../results/development/figures_training_objectives.csv), [task quality](../results/development/figures_task_learning.csv) | `scripts/plot_quantitative_figures.py` |
 | 5: favorable and failed completions | [PDF](../figures/main/fig05_qualitative_results.pdf) · [PNG](../figures/main/fig05_qualitative_results.png) · [SVG](../figures/main/fig05_qualitative_results.svg) | [20 archived tiles](../results/qualitative/test_qualitative_tiles.npz), [selection provenance](../results/qualitative/test_qualitative_provenance.json) | `scripts/plot_qualitative_results.py` |
@@ -50,3 +51,20 @@ curves summarize two seeds. These evaluation conditions are not interchangeable.
 The plot coordinate audit is written to `figures/plotted_coordinates.json`.
 Rendering can vary with installed fonts and library versions; the archived
 measurements, averaging rules and plotted values are the reproducibility target.
+
+## Repository framework diagram
+
+`python scripts/build_framework.py` rebuilds Figure 2 as standalone HTML and editable SVG
+using NumPy and Pillow (included through the plotting dependencies). The three input
+thumbnails show the archived ground truth and two masked observations of Abyssinian_2.
+Only the original display mapping is applied; no model is run and no image is retouched.
+
+The included PNG was exported from the same SVG using librsvg:
+
+```bash
+rsvg-convert -w 3200 -h 2080 -o figures/main/fig02_framework.png figures/main/fig02_framework.svg
+```
+
+`rsvg-convert` is an optional system dependency for PNG export. Download the HTML file
+and open it locally to view the standalone page; GitHub displays HTML as source.
+The original framework remains embedded in the unchanged submitted PDFs.

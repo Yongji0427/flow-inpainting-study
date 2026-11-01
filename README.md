@@ -42,6 +42,16 @@ Against perceptual regression, FM8 reduces mean LPIPS by **11.8%** and improves 
 
 *Selected favorable and failure examples from three archived test images. FM8 displays one fixed noise sample; selection scores average four samples. These examples illustrate behavior, not its frequency across the test set. Lower LPIPS does not ensure correct facial structure. [Selection and source provenance](results/qualitative/test_qualitative_provenance.json).*
 
+## Method overview
+
+![Matched observations, common U-Net architecture, and three independently trained restoration objectives](figures/main/fig02_framework.png)
+
+The models share an architecture and matched training conditions. Pixel and perceptual regression use one forward pass; FM integrates a masked velocity field. Frozen VGG16 features supply training supervision for the perceptual control.
+
+[Editable SVG](figures/main/fig02_framework.svg) · [HTML source](figures/main/fig02_framework.html) · [Diagram generator](scripts/build_framework.py)
+
+*This repository diagram was redesigned after submission. The submitted report and supplementary PDFs remain unchanged.*
+
 ## Use the repository
 
 **Inspect the archived results** with Python 3.10+ and the standard library:

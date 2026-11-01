@@ -22,3 +22,5 @@ jobs:
         run: python -m pip install -r requirements-figures.txt
       - name: Rebuild manuscript figures without models or downloads
         run: python scripts/plot_results.py
+      - name: Build repository framework SVG and HTML
+        run: python scripts/build_framework.py
